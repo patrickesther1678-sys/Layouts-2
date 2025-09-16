@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hospital Programs</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+      transition: background 0.5s ease;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 15px;
+    }
+
+    .box {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .box img {
+      width: 50px;
+      height: 50px;
+      border-radius: 6px;
+      margin-right: 10px;
+      object-fit: cover;
+    }
+
+    .box p {
+      margin: 0;
+      font-size: 14px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    /* Keep layout same on phone */
+    @media (max-width: 768px) {
+      .container {
+        grid-template-columns: repeat(6, 1fr);
+        overflow-x: auto;
+      }
+    }
+
+    /* Button styling in top-right corner */
+    .color-btn {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .color-btn:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="color-btn" onclick="changeBackground()">Change Background</button>
+
+  <h2 style="text-align:center; margin:40px 0 20px 0;">Our Hospital Programs</h2>
+
+  <div class="container">
+    <div class="box">
+      <img src="https://img.icons8.com/ios-filled/100/hospital-room.png" alt="Hospital Program 1">
+      <p>Hospital Program 1</p>
+    </div>
+    <div class="box">
+      <img src="https://img.icons8.com/ios-filled/100/stethoscope.png" alt="Hospital Program 2">
+      <p>Hospital Program 2</p>
+    </div>
+    <div class="box">
+      <img src="https://img.icons8.com/ios-filled/100/medical-doctor.png" alt="Hospital Program 3">
+      <p>Hospital Program 3</p>
+    </div>
+    <div class="box">
+      <img src="https://img.icons8.com/ios-filled/100/hospital.png" alt="Hospital Program 4">
+      <p>Hospital Program 4</p>
+    </div>
+    <div class="box">
+      <img src="https://img.icons8.com/ios-filled/100/ambulance.png" alt="Hospital Program 5">
+      <p>Hospital Program 5</p>
+    </div>
+    <div class="box">
+      <img src="https://img.icons8.com/ios-filled/100/patient-care.png" alt="Hospital Program 6">
+      <p>Hospital Program 6</p>
+    </div>
+  </div>
+
+  <script>
+    // Basic JavaScript: toggle between two background colors
+    let isDefault = true;
+
+    function changeBackground() {
+      if (isDefault) {
+        document.body.style.background = "#e6f7ff"; // light blue
+      } else {
+        document.body.style.background = "#f4f4f4"; // default gray
+      }
+      isDefault = !isDefault; // flip the state
+    }
+  </script>
+
+</body>
+</html>
